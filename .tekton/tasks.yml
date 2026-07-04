@@ -15,7 +15,7 @@ spec:
           value: $(workspace.source.path)
       workingDir: $(workspace.source.path)
       securityContext:
-        runAsNonRoot: flase
+        runAsNonRoot: false
         runAsUser: 0
       script: |
         #!/usr/bin/env sh
@@ -44,7 +44,7 @@ spec:
     - name: source
   params:
     - name: args
-      description: Argumetns to pass to nose
+      description: Arguments to pass to nose
       type: string
       default: "-v"
   steps:
